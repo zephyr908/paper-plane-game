@@ -1,0 +1,2636 @@
+{
+  "version": 17,
+  "settings": {
+    "unlockAllLevels": 1,
+    "invulnTime": 1,
+    "clearHeal": 1,
+    "bulletSpeed": 520,
+    "showFps": 0,
+    "sound": 1,
+    "vibrate": 1,
+    "battleScale": 0.72,
+    "hpBarDelay": 0.32,
+    "xpBarDelay": 0.28
+  },
+  "player": {
+    "baseDamage": 1,
+    "baseRate": 6,
+    "baseBullets": 1,
+    "baseMove": 9,
+    "baseArmor": 4
+  },
+  "parts": [
+    {
+      "id": "body_std",
+      "slot": "body",
+      "name": "标准机身",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "均衡，无加成",
+      "quality": 0
+    },
+    {
+      "id": "body_light",
+      "slot": "body",
+      "name": "轻型机身",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 2,
+      "armor": -1,
+      "desc": "更灵活，但更脆",
+      "quality": 1
+    },
+    {
+      "id": "body_heavy",
+      "slot": "body",
+      "name": "加固机身",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": -1,
+      "armor": 2,
+      "desc": "更耐打，转向偏慢",
+      "quality": 2
+    },
+    {
+      "id": "wing_flat",
+      "slot": "wing",
+      "name": "平直翼",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "无加成",
+      "quality": 0
+    },
+    {
+      "id": "wing_swept",
+      "slot": "wing",
+      "name": "后掠翼",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 1.5,
+      "armor": 0,
+      "desc": "机动 +1.5",
+      "quality": 1
+    },
+    {
+      "id": "wing_delta",
+      "slot": "wing",
+      "name": "三角翼",
+      "damage": 0,
+      "rate": 0.4,
+      "bullets": 0,
+      "move": 1,
+      "armor": 0,
+      "desc": "机动 +1，射速 +0.4",
+      "quality": 2
+    },
+    {
+      "id": "gun_single",
+      "slot": "gun",
+      "name": "单管机炮",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "1 发弹道",
+      "quality": 0
+    },
+    {
+      "id": "gun_twin",
+      "slot": "gun",
+      "name": "双联机炮",
+      "damage": 0,
+      "rate": 0.7,
+      "bullets": 1,
+      "move": 0,
+      "armor": 0,
+      "desc": "2 发弹道，射速 +0.7",
+      "quality": 1
+    },
+    {
+      "id": "gun_spread",
+      "slot": "gun",
+      "name": "散射炮",
+      "damage": 0,
+      "rate": 1.2,
+      "bullets": 2,
+      "move": 0,
+      "armor": 0,
+      "desc": "3 发弹道，射速 +1.2",
+      "quality": 2
+    },
+    {
+      "id": "eng_single",
+      "slot": "engine",
+      "name": "单引擎",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "无加成",
+      "quality": 0
+    },
+    {
+      "id": "eng_twin",
+      "slot": "engine",
+      "name": "双引擎",
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 1.5,
+      "armor": 0,
+      "desc": "机动 +1.5",
+      "quality": 1
+    },
+    {
+      "id": "eng_pulse",
+      "slot": "engine",
+      "name": "脉冲引擎",
+      "damage": 0,
+      "rate": 0.3,
+      "bullets": 0,
+      "move": 2.5,
+      "armor": 0,
+      "desc": "机动 +2.5，射速 +0.3",
+      "quality": 2
+    },
+    {
+      "id": "sub_missile",
+      "slot": "sub",
+      "name": "导弹挂架",
+      "quality": 1,
+      "damage": 0.5,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "翼根挂载导弹，伤害 +0.5"
+    },
+    {
+      "id": "sub_cannon",
+      "slot": "sub",
+      "name": "侧翼机炮",
+      "quality": 2,
+      "damage": 0.8,
+      "rate": 0.3,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "翼前缘加装机炮，伤害 +0.8，射速 +0.3"
+    },
+    {
+      "id": "sub_both",
+      "slot": "sub",
+      "name": "导弹机炮组",
+      "quality": 3,
+      "damage": 1.5,
+      "rate": 0.3,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "两者兼备，伤害 +1.5，射速 +0.3"
+    },
+    {
+      "id": "core_plate",
+      "slot": "core",
+      "name": "装甲核心",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 1,
+      "desc": "机身加装护板，护甲 +1"
+    },
+    {
+      "id": "core_reactor",
+      "slot": "core",
+      "name": "反应堆",
+      "quality": 2,
+      "damage": 0.4,
+      "rate": 0.8,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "供能充沛，射速 +0.8，伤害 +0.4"
+    },
+    {
+      "id": "core_shield",
+      "slot": "core",
+      "name": "护盾发生器",
+      "quality": 3,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0.5,
+      "armor": 2,
+      "desc": "护甲 +2，机动 +0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "dart",
+      "name": "飞镖机",
+      "shape": "dart",
+      "size": 28,
+      "hp": 14,
+      "speed": 95,
+      "behavior": "straight",
+      "score": 10,
+      "gold": 1,
+      "amp": 0,
+      "freq": 0,
+      "turn": 0,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "最基础的直线俯冲小兵",
+      "rarity": 0
+    },
+    {
+      "id": "wide",
+      "name": "宽翼机",
+      "shape": "wide",
+      "size": 38,
+      "hp": 30,
+      "speed": 80,
+      "behavior": "straight",
+      "score": 20,
+      "gold": 2,
+      "amp": 0,
+      "freq": 0,
+      "turn": 0,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "体型更大、更耐打的直线机",
+      "rarity": 1
+    },
+    {
+      "id": "zig",
+      "name": "蛇行机",
+      "shape": "delta",
+      "size": 30,
+      "hp": 22,
+      "speed": 100,
+      "behavior": "zigzag",
+      "score": 25,
+      "gold": 2,
+      "amp": 55,
+      "freq": 2.2,
+      "turn": 0,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "左右蛇行，不好瞄",
+      "rarity": 1
+    },
+    {
+      "id": "round",
+      "name": "装甲球",
+      "shape": "round",
+      "size": 40,
+      "hp": 64,
+      "speed": 58,
+      "behavior": "straight",
+      "score": 40,
+      "gold": 4,
+      "amp": 0,
+      "freq": 0,
+      "turn": 0,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "慢但血厚，需要集中火力",
+      "rarity": 2
+    },
+    {
+      "id": "diver",
+      "name": "俯冲机",
+      "shape": "dart",
+      "size": 24,
+      "hp": 22,
+      "speed": 150,
+      "behavior": "tracker",
+      "score": 30,
+      "gold": 3,
+      "amp": 0,
+      "freq": 0,
+      "turn": 120,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "高速，向玩家横向追踪",
+      "rarity": 1
+    },
+    {
+      "id": "gunner",
+      "name": "炮艇",
+      "shape": "wide",
+      "size": 44,
+      "hp": 52,
+      "speed": 62,
+      "behavior": "shooter",
+      "score": 50,
+      "gold": 5,
+      "amp": 0,
+      "freq": 0,
+      "turn": 0,
+      "fireInterval": 1.8,
+      "bulletSpeed": 190,
+      "stopY": 170,
+      "desc": "下到一定位置后减速，朝玩家开火",
+      "rarity": 3
+    },
+    {
+      "id": "bomber",
+      "name": "小型轰炸机",
+      "shape": "delta",
+      "size": 22,
+      "hp": 10,
+      "speed": 130,
+      "behavior": "straight",
+      "score": 0,
+      "gold": 0,
+      "amp": 0,
+      "freq": 0,
+      "turn": 0,
+      "fireInterval": 0,
+      "bulletSpeed": 0,
+      "stopY": 0,
+      "desc": "精英投放的小型轰炸机；击败后没有任何产出",
+      "rarity": 0
+    }
+  ],
+  "bosses": [
+    {
+      "id": "boss_anvil",
+      "name": "铁砧轰炸机",
+      "desc": "第 1 章关底。三阶段：扇形瞄准弹 → 环形弹幕 + 召唤 → 狂暴混合",
+      "hp": 600,
+      "w": 240,
+      "h": 130,
+      "speed": 70,
+      "enterY": 250,
+      "score": 1000,
+      "gold": 100,
+      "diamond": 5,
+      "p2At": 0.6,
+      "p3At": 0.3,
+      "fanDeg": 50,
+      "fireInterval1": 1.6,
+      "bullets1": 5,
+      "bulletSpeed1": 190,
+      "fireInterval2": 2.2,
+      "bullets2": 12,
+      "bulletSpeed2": 150,
+      "fireInterval3": 1.2,
+      "bullets3": 7,
+      "bulletSpeed3": 200,
+      "summonInterval": 5,
+      "summonEnemy": "dart",
+      "summonCount": 2,
+      "rarity": 6
+    }
+  ],
+  "levels": [
+    {
+      "id": "1-1",
+      "name": "起飞",
+      "duration": 140,
+      "spawnInterval": 2.2,
+      "hpMul": 1,
+      "speedMul": 1,
+      "pool": "dart:5,wide:2,zig:2,diver:1",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_carrier",
+      "eliteCount": 1
+    },
+    {
+      "id": "1-2",
+      "name": "宽翼编队",
+      "duration": 140,
+      "spawnInterval": 2,
+      "hpMul": 1,
+      "speedMul": 1.03,
+      "pool": "dart:4,wide:3,zig:3,diver:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_carrier",
+      "eliteCount": 1
+    },
+    {
+      "id": "1-3",
+      "name": "蛇行突袭",
+      "duration": 140,
+      "spawnInterval": 1.9,
+      "hpMul": 1,
+      "speedMul": 1.06,
+      "pool": "dart:3,wide:3,zig:3,round:2,diver:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_carrier",
+      "eliteCount": 1
+    },
+    {
+      "id": "1-4",
+      "name": "铁幕",
+      "duration": 140,
+      "spawnInterval": 1.8,
+      "hpMul": 1,
+      "speedMul": 1.09,
+      "pool": "dart:2,wide:3,zig:3,round:3,diver:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_carrier",
+      "eliteCount": 1
+    },
+    {
+      "id": "1-5",
+      "name": "关底 · 铁砧轰炸机",
+      "duration": 100,
+      "spawnInterval": 1.7,
+      "hpMul": 1,
+      "speedMul": 1.12,
+      "pool": "dart:2,wide:3,zig:3,round:3,gunner:2,diver:2",
+      "boss": "boss_anvil",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_carrier",
+      "eliteCount": 2
+    },
+    {
+      "id": "2-1",
+      "name": "余烬",
+      "duration": 140,
+      "spawnInterval": 1.7,
+      "hpMul": 1,
+      "speedMul": 1.15,
+      "pool": "wide:3,zig:3,round:3,gunner:2,diver:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_hive",
+      "eliteCount": 1
+    },
+    {
+      "id": "2-2",
+      "name": "俯冲警报",
+      "duration": 140,
+      "spawnInterval": 1.6,
+      "hpMul": 1,
+      "speedMul": 1.18,
+      "pool": "zig:3,round:3,gunner:3,diver:3,wide:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_hive",
+      "eliteCount": 1
+    },
+    {
+      "id": "2-3",
+      "name": "钢铁洪流",
+      "duration": 140,
+      "spawnInterval": 1.5,
+      "hpMul": 1,
+      "speedMul": 1.21,
+      "pool": "wide:2,zig:2,round:3,gunner:3,diver:3,dart:1",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_hive",
+      "eliteCount": 1
+    },
+    {
+      "id": "2-4",
+      "name": "炮火覆盖",
+      "duration": 140,
+      "spawnInterval": 1.4,
+      "hpMul": 1,
+      "speedMul": 1.24,
+      "pool": "round:3,gunner:4,diver:3,zig:3,wide:2",
+      "boss": "",
+      "bossHpMul": 1,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_hive",
+      "eliteCount": 1
+    },
+    {
+      "id": "2-5",
+      "name": "关底 · 铁砧重制（待设计新 Boss）",
+      "duration": 100,
+      "spawnInterval": 1.4,
+      "hpMul": 1,
+      "speedMul": 1.27,
+      "pool": "round:3,gunner:4,diver:4,zig:3,wide:2,dart:1",
+      "boss": "boss_anvil",
+      "bossHpMul": 1.8,
+      "normalTime": 10,
+      "tideTime": 15,
+      "finalTideTime": 30,
+      "tideBaseCount": 16,
+      "tideCountStep": 4,
+      "tideBatches": 4,
+      "elite": "elite_hive",
+      "eliteCount": 2
+    }
+  ],
+  "gears": [
+    {
+      "id": "gear_atk",
+      "name": "攻击齿轮",
+      "quality": 0,
+      "damage": 0.3,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "伤害 +0.3"
+    },
+    {
+      "id": "gear_rapid",
+      "name": "速射齿轮",
+      "quality": 0,
+      "damage": 0,
+      "rate": 0.3,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "射速 +0.3"
+    },
+    {
+      "id": "gear_swift",
+      "name": "疾风齿轮",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0.8,
+      "armor": 0,
+      "desc": "机动 +0.8"
+    },
+    {
+      "id": "gear_guard",
+      "name": "铁壁齿轮",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 1,
+      "desc": "护甲 +1"
+    },
+    {
+      "id": "gear_over",
+      "name": "超载齿轮",
+      "quality": 2,
+      "damage": 0.6,
+      "rate": 0.4,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "伤害 +0.6，射速 +0.4"
+    },
+    {
+      "id": "gear_titan",
+      "name": "泰坦齿轮",
+      "quality": 3,
+      "damage": 0.8,
+      "rate": 0,
+      "bullets": 0,
+      "move": -0.5,
+      "armor": 1,
+      "desc": "伤害 +0.8，护甲 +1，机动 -0.5"
+    }
+  ],
+  "progression": {
+    "xpToNext": [
+      36,
+      54,
+      78,
+      108,
+      144,
+      186,
+      234,
+      288,
+      348,
+      414,
+      486,
+      564
+    ],
+    "orbHold": 0.34,
+    "orbFly": 0.62,
+    "orbXpPerSize": 0.18,
+    "scorePerXp": 10,
+    "lvDamage": 0.12,
+    "lvRate": 0.05,
+    "lvBullets": 0,
+    "lvMove": 0.15,
+    "lvArmor": 0.15,
+    "levelCap": 10,
+    "nodeClearRate": 0.8,
+    "stageXpGrowth": 0.06,
+    "nodeNormalTime": 10,
+    "nodeTideTime": 15,
+    "finalTideTime": 30,
+    "tideWarnLead": 2.5,
+    "tideBaseCount": 16,
+    "tideCountStep": 4,
+    "finalTideMul": 1.2,
+    "tideBossMul": 1.4,
+    "tideHpStep": 0.12,
+    "tideKindsMin": 4,
+    "tideBatches": 4,
+    "enemyToughness": 1,
+    "bossFightSeconds": 75
+  },
+  "hexes": [
+    {
+      "id": "hex_power",
+      "name": "高爆弹头",
+      "quality": 1,
+      "damage": 0.6,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "伤害 +0.6"
+    },
+    {
+      "id": "hex_rapid",
+      "name": "速射供弹",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0.6,
+      "bullets": 0,
+      "move": 0,
+      "armor": 0,
+      "desc": "射速 +0.6"
+    },
+    {
+      "id": "hex_split",
+      "name": "分裂弹道",
+      "quality": 2,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 1,
+      "move": 0,
+      "armor": 0,
+      "desc": "弹道 +1"
+    },
+    {
+      "id": "hex_swift",
+      "name": "轻量机身",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 2.5,
+      "armor": 0,
+      "desc": "机动 +2.5"
+    },
+    {
+      "id": "hex_plate",
+      "name": "应急装甲",
+      "quality": 1,
+      "damage": 0,
+      "rate": 0,
+      "bullets": 0,
+      "move": 0,
+      "armor": 2,
+      "desc": "护甲 +2"
+    },
+    {
+      "id": "hex_shield",
+      "name": "吸能护盾",
+      "quality": 2,
+      "damage": 0,
+      "rate": 0.2,
+      "bullets": 0,
+      "move": 0.8,
+      "armor": 1,
+      "desc": "护甲 +1，机动 +0.8，射速 +0.2"
+    },
+    {
+      "id": "hex_overload",
+      "name": "过载核心",
+      "quality": 3,
+      "damage": 0.9,
+      "rate": 0.5,
+      "bullets": 0,
+      "move": 0,
+      "armor": -1,
+      "desc": "伤害 +0.9，射速 +0.5，护甲 -1"
+    },
+    {
+      "id": "hex_scope",
+      "name": "精准校准",
+      "quality": 2,
+      "damage": 0.3,
+      "rate": 0.25,
+      "bullets": 0,
+      "move": 0.5,
+      "armor": 0,
+      "desc": "伤害 +0.3，射速 +0.25，机动 +0.5"
+    }
+  ],
+  "elites": [
+    {
+      "id": "elite_carrier",
+      "name": "蜂巢无人机",
+      "shape": "carrier",
+      "size": 76,
+      "hp": 320,
+      "patrolY": 128,
+      "patrolLeft": 72,
+      "patrolRight": 348,
+      "patrolSpeed": 96,
+      "spawnInterval": 2.6,
+      "spawnCount": 3,
+      "spawnEnemy": "bomber",
+      "stopTime": 0.55,
+      "minionHpMul": 1,
+      "minionSpeedMul": 1.25,
+      "score": 500,
+      "xp": 40,
+      "desc": "第 1 章精英。屏幕上方左右往返，只有投放小型轰炸机群时停留；投放物击败后没有任何产出。",
+      "rarity": 5
+    },
+    {
+      "id": "elite_hive",
+      "name": "重型蜂巢母舰",
+      "shape": "carrier",
+      "size": 92,
+      "hp": 560,
+      "patrolY": 140,
+      "patrolLeft": 64,
+      "patrolRight": 356,
+      "patrolSpeed": 118,
+      "spawnInterval": 2.1,
+      "spawnCount": 4,
+      "spawnEnemy": "bomber",
+      "stopTime": 0.48,
+      "minionHpMul": 1.4,
+      "minionSpeedMul": 1.4,
+      "score": 900,
+      "xp": 70,
+      "desc": "第 2 章精英。更快、更厚、每批投放更多，投放的小轰炸机也更硬。",
+      "rarity": 6
+    }
+  ],
+  "meta": {
+    "coinPerScore": 0.1,
+    "stats": [
+      {
+        "id": "damage",
+        "name": "火力",
+        "maxLevel": 10,
+        "perLevel": 0.15,
+        "baseCost": 60,
+        "costStep": 45
+      },
+      {
+        "id": "rate",
+        "name": "射速",
+        "maxLevel": 10,
+        "perLevel": 0.18,
+        "baseCost": 60,
+        "costStep": 45
+      },
+      {
+        "id": "bullets",
+        "name": "弹道",
+        "maxLevel": 3,
+        "perLevel": 0.34,
+        "baseCost": 500,
+        "costStep": 420
+      },
+      {
+        "id": "move",
+        "name": "机动",
+        "maxLevel": 10,
+        "perLevel": 0.4,
+        "baseCost": 50,
+        "costStep": 40
+      },
+      {
+        "id": "armor",
+        "name": "护甲",
+        "maxLevel": 10,
+        "perLevel": 0.5,
+        "baseCost": 50,
+        "costStep": 40
+      }
+    ]
+  },
+  "combo": {
+    "rainbowAt": 1000,
+    "rankSize": 12,
+    "sizeMax": 34,
+    "scoreSizeMax": 20,
+    "cashDur": 1.35,
+    "ranks": [
+      {
+        "id": "good",
+        "at": 100,
+        "text": "GOOD",
+        "color": "#7ef6c4"
+      },
+      {
+        "id": "great",
+        "at": 200,
+        "text": "GREAT",
+        "color": "#68c6ff"
+      },
+      {
+        "id": "wonderful",
+        "at": 300,
+        "text": "WONDERFUL",
+        "color": "#c48eff"
+      },
+      {
+        "id": "perfect",
+        "at": 400,
+        "text": "PERFECT",
+        "color": "#ffd668"
+      },
+      {
+        "id": "excellent",
+        "at": 1000,
+        "text": "EXCELLENT",
+        "color": "#ff8ce0"
+      }
+    ]
+  },
+  "audio": {
+    "master": 1,
+    "bgm": {
+      "home": {
+        "name": "主界面 BGM",
+        "selected": "home_soft",
+        "variants": [
+          {
+            "id": "home_soft",
+            "name": "柔和 · 星港",
+            "bpm": 92,
+            "lead": "69 . . . 72 . . . 76 . 74 . 72 . . . 67 . . . 69 . . . 72 . 71 . 69 . . . 64 . . . 67 . . . 72 . 76 . 74 . . . 67 . . . 71 . . . 74 . 72 . 71 . . .",
+            "bass": "45 . . . . . . . 45 . . . . . . . 41 . . . . . . . 41 . . . . . . . 36 . . . . . . . 36 . . . . . . . 43 . . . . . . . 43 . . . . . . .",
+            "drum": "............h...............h...............h...............h...",
+            "wave": "p25",
+            "bassWave": "triangle",
+            "vol": 1,
+            "desc": "Am–F–C–G 长音，稀疏 hi-hat，几乎无鼓点；F39 主界面原曲"
+          },
+          {
+            "id": "home_dream",
+            "name": "梦幻 · 八音盒",
+            "bpm": 108,
+            "lead": "76 . 81 . 84 . 81 . 76 . 79 . 83 . 79 . 77 . 81 . 84 . 81 . 77 . 80 . 84 . 80 . 72 . 76 . 79 . 76 . 72 . 76 . 81 . 76 . 74 . 79 . 83 . 79 . 74 . 78 . 81 . 78 .",
+            "bass": "40 . . . . . . . 40 . . . . . . . 41 . . . . . . . 41 . . . . . . . 36 . . . . . . . 36 . . . . . . . 38 . . . . . . . 38 . . . . . . .",
+            "drum": "....h.......h.......h.......h.......h.......h.......h.......h...",
+            "wave": "triangle",
+            "bassWave": "triangle",
+            "vol": 0.9,
+            "desc": "高八度琶音 + 三角波，像八音盒，最轻的一首"
+          },
+          {
+            "id": "home_dusk",
+            "name": "暮色 · 慢摇",
+            "bpm": 76,
+            "lead": "69 . . . . . . . 72 . . . . . . . 67 . . . . . . . 69 . . . . . . . 64 . . . . . . . 67 . . . . . . . 67 . . . 71 . . . 69 . . . . . . .",
+            "bass": "45 . 47 . 48 . 50 . 45 . 47 . 48 . 50 . 41 . 43 . 44 . 46 . 41 . 43 . 44 . 46 . 36 . 38 . 40 . 41 . 36 . 38 . 40 . 41 . 43 . 45 . 47 . 48 . 43 . 45 . 47 . 48 .",
+            "drum": "........h...............h...............h...............h.......",
+            "wave": "p12",
+            "bassWave": "triangle",
+            "vol": 0.9,
+            "desc": "walking bass 慢速摇摆，12.5% 窄脉冲，节奏最松"
+          },
+          {
+            "id": "home_orbit",
+            "name": "轨道 · 圆舞曲",
+            "bpm": 132,
+            "lead": "69 . 72 76 . 72 69 . 72 76 . 81 . 79 . . 67 . 69 72 . 69 67 . 69 74 . 79 . 77 . . 64 . 67 72 . 67 64 . 67 76 . 79 . 76 . . 67 . 71 74 . 71 67 . 71 76 . 74 . 71 . .",
+            "bass": "45 . . 45 . . 45 . 45 . . 45 . . 45 . 41 . . 41 . . 41 . 41 . . 41 . . 41 . 36 . . 36 . . 36 . 36 . . 36 . . 36 . 43 . . 43 . . 43 . 43 . . 43 . . 43 .",
+            "drum": "k...h...k...h...k...h...k...h...k...h...k...h...k...h...k...h...",
+            "wave": "p25",
+            "bassWave": "triangle",
+            "vol": 1.05,
+            "desc": "三拍子感的轨道琶音，轻 kick 打拍，主界面里最明亮"
+          }
+        ]
+      },
+      "battle": {
+        "name": "战斗 BGM",
+        "selected": "battle_drive",
+        "variants": [
+          {
+            "id": "battle_drive",
+            "name": "疾行 · 追击",
+            "bpm": 158,
+            "lead": "69 72 76 72 69 72 76 79 76 72 69 67 69 72 76 72 65 69 72 69 65 69 72 77 72 69 65 64 65 69 72 69 60 64 67 64 60 64 67 72 67 64 60 59 60 64 67 64 67 71 74 71 67 71 74 79 74 71 67 66 67 71 74 71",
+            "bass": "45 . 45 . 45 . 45 . 45 . 45 . 45 . 45 . 41 . 41 . 41 . 41 . 41 . 41 . 41 . 41 . 36 . 36 . 36 . 36 . 36 . 36 . 36 . 36 . 43 . 43 . 43 . 43 . 43 . 43 . 43 . 43 .",
+            "drum": "k.h.s.h.k.h.s.h.k.h.s.h.k.h.s.h.k.h.s.h.k.h.s.h.k.h.s.h.k.h.s.h.",
+            "wave": "p12",
+            "bassWave": "triangle",
+            "vol": 1,
+            "desc": "F39 战斗原曲：16 分跑动 + 八分贝斯 + 全套鼓"
+          },
+          {
+            "id": "battle_blitz",
+            "name": "闪电 · 高速",
+            "bpm": 184,
+            "lead": "69 72 76 79 81 79 76 72 69 72 76 79 84 81 79 76 65 69 72 77 79 77 72 69 65 69 72 77 81 79 77 72 60 64 67 72 76 72 67 64 60 64 67 72 79 76 72 67 67 71 74 79 83 79 74 71 67 71 74 79 86 83 79 74",
+            "bass": "45 45 . 45 45 . 45 45 45 45 . 45 45 . 45 45 41 41 . 41 41 . 41 41 41 41 . 41 41 . 41 41 36 36 . 36 36 . 36 36 36 36 . 36 36 . 36 36 43 43 . 43 43 . 43 43 43 43 . 43 43 . 43 43",
+            "drum": "kshskshskshskshskshskshskshskshskshskshskshskshskshskshskshskshs",
+            "wave": "p12",
+            "bassWave": "triangle",
+            "vol": 0.95,
+            "desc": "184 BPM 全 16 分连跑 + 密集鼓，最紧张的一首"
+          },
+          {
+            "id": "battle_boss",
+            "name": "压境 · 决战",
+            "bpm": 140,
+            "lead": "57 . . 56 . . 55 . 54 . . 53 . . 52 . 57 . 60 . 56 . 59 . 55 . 58 . 54 . 57 . 53 . . 52 . . 51 . 50 . . 49 . . 48 . 55 . 58 . 54 . 57 . 53 . 56 . 52 . 55 .",
+            "bass": "33 . . . 33 . . . 33 . . . 33 . . . 32 . . . 32 . . . 32 . . . 32 . . . 31 . . . 31 . . . 31 . . . 31 . . . 30 . . . 30 . . . 30 . . . 30 . . .",
+            "drum": "k...s...k...s...k...s...k...s...k...s...k...s...k...s...k...s...",
+            "wave": "p25",
+            "bassWave": "triangle",
+            "vol": 1,
+            "desc": "半音下行低音 + 重军鼓，压迫感最强，适合 Boss 关"
+          },
+          {
+            "id": "battle_chase",
+            "name": "缠斗 · 切分",
+            "bpm": 166,
+            "lead": ". 69 . 72 . 76 . 72 . 69 . 76 . 79 . 76 . 65 . 69 . 72 . 69 . 65 . 72 . 77 . 72 . 60 . 64 . 67 . 64 . 60 . 67 . 72 . 67 . 67 . 71 . 74 . 71 . 67 . 74 . 79 . 74",
+            "bass": "45 . . 45 . 45 . . 45 . . 45 . 45 . . 41 . . 41 . 41 . . 41 . . 41 . 41 . . 36 . . 36 . 36 . . 36 . . 36 . 36 . . 43 . . 43 . 43 . . 43 . . 43 . 43 . .",
+            "drum": "h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.h.k.",
+            "wave": "p12",
+            "bassWave": "triangle",
+            "vol": 1,
+            "desc": "反拍 lead + 反拍 hi-hat，切分感明显，适合躲弹幕"
+          }
+        ]
+      }
+    },
+    "sfx": {
+      "start": {
+        "name": "出战",
+        "selected": "start_boost",
+        "variants": [
+          {
+            "id": "start_boost",
+            "name": "引擎点火",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 160,
+                "f1": 700,
+                "d": 0.3,
+                "w": "sawtooth",
+                "v": 0.2
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.24,
+                "v": 0.16,
+                "lo": 900,
+                "hi": 3200
+              },
+              {
+                "at": 0.2,
+                "k": "t",
+                "f0": 880,
+                "f1": 1400,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.12
+              }
+            ],
+            "desc": "推进器由低到高点火，默认款"
+          },
+          {
+            "id": "start_fanfare",
+            "name": "短号角",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 523,
+                "f1": 523,
+                "d": 0.11,
+                "w": "square",
+                "v": 0.16
+              },
+              {
+                "at": 0.1,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.11,
+                "w": "square",
+                "v": 0.16
+              },
+              {
+                "at": 0.2,
+                "k": "t",
+                "f0": 784,
+                "f1": 784,
+                "d": 0.22,
+                "w": "square",
+                "v": 0.18
+              }
+            ],
+            "desc": "三音上行方波号角"
+          },
+          {
+            "id": "start_countdown",
+            "name": "倒计时",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 880,
+                "f1": 880,
+                "d": 0.06,
+                "w": "square",
+                "v": 0.13
+              },
+              {
+                "at": 0.14,
+                "k": "t",
+                "f0": 880,
+                "f1": 880,
+                "d": 0.06,
+                "w": "square",
+                "v": 0.13
+              },
+              {
+                "at": 0.28,
+                "k": "t",
+                "f0": 1175,
+                "f1": 1560,
+                "d": 0.2,
+                "w": "square",
+                "v": 0.17
+              }
+            ],
+            "desc": "三声滴答后起跳"
+          },
+          {
+            "id": "start_warp",
+            "name": "跃迁",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 220,
+                "f1": 1760,
+                "d": 0.42,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.06,
+                "k": "n",
+                "d": 0.34,
+                "v": 0.1,
+                "lo": 1200,
+                "hi": 6000
+              },
+              {
+                "at": 0.34,
+                "k": "t",
+                "f0": 1560,
+                "f1": 2100,
+                "d": 0.16,
+                "w": "sine",
+                "v": 0.1
+              }
+            ],
+            "desc": "长上扫 + 高频铃"
+          }
+        ]
+      },
+      "win": {
+        "name": "胜利结算",
+        "selected": "win_fanfare",
+        "variants": [
+          {
+            "id": "win_fanfare",
+            "name": "胜利号角",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 523,
+                "f1": 523,
+                "d": 0.14,
+                "w": "square",
+                "v": 0.16
+              },
+              {
+                "at": 0.13,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.14,
+                "w": "square",
+                "v": 0.16
+              },
+              {
+                "at": 0.26,
+                "k": "t",
+                "f0": 784,
+                "f1": 784,
+                "d": 0.14,
+                "w": "square",
+                "v": 0.16
+              },
+              {
+                "at": 0.39,
+                "k": "t",
+                "f0": 1047,
+                "f1": 1047,
+                "d": 0.38,
+                "w": "square",
+                "v": 0.2
+              }
+            ],
+            "desc": "大三和弦上行收尾，默认款"
+          },
+          {
+            "id": "win_arp",
+            "name": "上升琶音",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 523,
+                "f1": 523,
+                "d": 0.09,
+                "w": "triangle",
+                "v": 0.13
+              },
+              {
+                "at": 0.08,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.09,
+                "w": "triangle",
+                "v": 0.13
+              },
+              {
+                "at": 0.16,
+                "k": "t",
+                "f0": 784,
+                "f1": 784,
+                "d": 0.09,
+                "w": "triangle",
+                "v": 0.13
+              },
+              {
+                "at": 0.24,
+                "k": "t",
+                "f0": 1047,
+                "f1": 1047,
+                "d": 0.09,
+                "w": "triangle",
+                "v": 0.14
+              },
+              {
+                "at": 0.32,
+                "k": "t",
+                "f0": 1319,
+                "f1": 1319,
+                "d": 0.09,
+                "w": "triangle",
+                "v": 0.14
+              },
+              {
+                "at": 0.4,
+                "k": "t",
+                "f0": 1568,
+                "f1": 1568,
+                "d": 0.3,
+                "w": "triangle",
+                "v": 0.16
+              }
+            ],
+            "desc": "六音快速琶音"
+          },
+          {
+            "id": "win_chime",
+            "name": "水晶铃",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 1319,
+                "f1": 1319,
+                "d": 0.42,
+                "w": "sine",
+                "v": 0.18
+              },
+              {
+                "at": 0.06,
+                "k": "t",
+                "f0": 1976,
+                "f1": 1976,
+                "d": 0.36,
+                "w": "sine",
+                "v": 0.12
+              },
+              {
+                "at": 0.16,
+                "k": "t",
+                "f0": 2637,
+                "f1": 2637,
+                "d": 0.28,
+                "w": "sine",
+                "v": 0.08
+              }
+            ],
+            "desc": "高频泛音叠铃，最轻柔"
+          },
+          {
+            "id": "win_8bit",
+            "name": "红白机通关",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.11,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.22,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.33,
+                "k": "t",
+                "f0": 523,
+                "f1": 523,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.44,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.14
+              },
+              {
+                "at": 0.55,
+                "k": "t",
+                "f0": 784,
+                "f1": 784,
+                "d": 0.34,
+                "w": "square",
+                "v": 0.18
+              }
+            ],
+            "desc": "经典 8-bit 通关短旋律"
+          }
+        ]
+      },
+      "lose": {
+        "name": "失败结算",
+        "selected": "lose_fall",
+        "variants": [
+          {
+            "id": "lose_fall",
+            "name": "下行三音",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 660,
+                "f1": 660,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.16
+              },
+              {
+                "at": 0.16,
+                "k": "t",
+                "f0": 554,
+                "f1": 554,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.16
+              },
+              {
+                "at": 0.32,
+                "k": "t",
+                "f0": 392,
+                "f1": 392,
+                "d": 0.34,
+                "w": "triangle",
+                "v": 0.18
+              }
+            ],
+            "desc": "平稳下行，默认款"
+          },
+          {
+            "id": "lose_sigh",
+            "name": "低沉长叹",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 330,
+                "f1": 90,
+                "d": 0.62,
+                "w": "sawtooth",
+                "v": 0.2
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.5,
+                "v": 0.16,
+                "lo": 1400,
+                "hi": 180
+              }
+            ],
+            "desc": "长下扫 + 气流噪声"
+          },
+          {
+            "id": "lose_glitch",
+            "name": "故障音",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 740,
+                "f1": 740,
+                "d": 0.07,
+                "w": "square",
+                "v": 0.13
+              },
+              {
+                "at": 0.11,
+                "k": "t",
+                "f0": 520,
+                "f1": 520,
+                "d": 0.05,
+                "w": "square",
+                "v": 0.13
+              },
+              {
+                "at": 0.2,
+                "k": "t",
+                "f0": 660,
+                "f1": 660,
+                "d": 0.07,
+                "w": "square",
+                "v": 0.13
+              },
+              {
+                "at": 0.31,
+                "k": "t",
+                "f0": 330,
+                "f1": 180,
+                "d": 0.24,
+                "w": "square",
+                "v": 0.16
+              }
+            ],
+            "desc": "断续方波后掉电"
+          },
+          {
+            "id": "lose_minor",
+            "name": "小调下行",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 440,
+                "f1": 440,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.15
+              },
+              {
+                "at": 0.15,
+                "k": "t",
+                "f0": 415,
+                "f1": 415,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.15
+              },
+              {
+                "at": 0.3,
+                "k": "t",
+                "f0": 349,
+                "f1": 349,
+                "d": 0.16,
+                "w": "triangle",
+                "v": 0.15
+              },
+              {
+                "at": 0.45,
+                "k": "t",
+                "f0": 262,
+                "f1": 262,
+                "d": 0.38,
+                "w": "triangle",
+                "v": 0.18
+              }
+            ],
+            "desc": "半音下行，最沉的一首"
+          }
+        ]
+      },
+      "cash": {
+        "name": "断连结算",
+        "selected": "cash_arp",
+        "variants": [
+          {
+            "id": "cash_arp",
+            "name": "上扬三连音",
+            "gap": 240,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 520,
+                "f1": 780,
+                "d": 0.1,
+                "w": "triangle",
+                "v": 0.16
+              },
+              {
+                "at": 0.07,
+                "k": "t",
+                "f0": 780,
+                "f1": 1180,
+                "d": 0.12,
+                "w": "triangle",
+                "v": 0.14
+              },
+              {
+                "at": 0.15,
+                "k": "t",
+                "f0": 1180,
+                "f1": 1560,
+                "d": 0.14,
+                "w": "sine",
+                "v": 0.1
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.06,
+                "v": 0.1,
+                "lo": 4200,
+                "hi": 1800
+              }
+            ],
+            "desc": "F38 原款收钱音，默认款"
+          },
+          {
+            "id": "cash_coin",
+            "name": "金币叮当",
+            "gap": 240,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 988,
+                "f1": 988,
+                "d": 0.09,
+                "w": "square",
+                "v": 0.12
+              },
+              {
+                "at": 0.08,
+                "k": "t",
+                "f0": 1319,
+                "f1": 1319,
+                "d": 0.16,
+                "w": "square",
+                "v": 0.14
+              }
+            ],
+            "desc": "两声高频叮当"
+          },
+          {
+            "id": "cash_chord",
+            "name": "和弦收束",
+            "gap": 240,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 523,
+                "f1": 523,
+                "d": 0.22,
+                "w": "triangle",
+                "v": 0.11
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 659,
+                "f1": 659,
+                "d": 0.22,
+                "w": "triangle",
+                "v": 0.11
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 784,
+                "f1": 784,
+                "d": 0.22,
+                "w": "triangle",
+                "v": 0.11
+              },
+              {
+                "at": 0.1,
+                "k": "t",
+                "f0": 1047,
+                "f1": 1568,
+                "d": 0.18,
+                "w": "sine",
+                "v": 0.1
+              }
+            ],
+            "desc": "三和弦齐奏后上挑"
+          },
+          {
+            "id": "cash_blip",
+            "name": "电子双音",
+            "gap": 240,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 740,
+                "f1": 980,
+                "d": 0.07,
+                "w": "square",
+                "v": 0.12
+              },
+              {
+                "at": 0.09,
+                "k": "t",
+                "f0": 1180,
+                "f1": 1480,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.12
+              }
+            ],
+            "desc": "短促电子双音"
+          }
+        ]
+      },
+      "fire": {
+        "name": "开火",
+        "selected": "fire_pulse",
+        "variants": [
+          {
+            "id": "fire_pulse",
+            "name": "短促脉冲",
+            "gap": 60,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 880,
+                "f1": 470,
+                "d": 0.04,
+                "w": "triangle",
+                "v": 0.045
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "fire_laser",
+            "name": "激光下滑",
+            "gap": 60,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 1600,
+                "f1": 320,
+                "d": 0.09,
+                "w": "sawtooth",
+                "v": 0.05
+              }
+            ],
+            "desc": "高到低的长一点激光"
+          },
+          {
+            "id": "fire_snap",
+            "name": "干脆咔哒",
+            "gap": 60,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.03,
+                "v": 0.07,
+                "lo": 5200,
+                "hi": 2400
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 720,
+                "f1": 420,
+                "d": 0.03,
+                "w": "square",
+                "v": 0.05
+              }
+            ],
+            "desc": "噪声 + 短方波，最干"
+          },
+          {
+            "id": "fire_plasma",
+            "name": "等离子双频",
+            "gap": 60,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 1180,
+                "f1": 760,
+                "d": 0.05,
+                "w": "square",
+                "v": 0.045
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 590,
+                "f1": 380,
+                "d": 0.05,
+                "w": "triangle",
+                "v": 0.04
+              }
+            ],
+            "desc": "高低两层叠出厚度"
+          }
+        ]
+      },
+      "tick": {
+        "name": "命中 / UI 点击",
+        "selected": "tick_classic",
+        "variants": [
+          {
+            "id": "tick_classic",
+            "name": "轻嗒",
+            "gap": 70,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 620,
+                "f1": 380,
+                "d": 0.05,
+                "w": "square",
+                "v": 0.07
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "tick_soft",
+            "name": "柔和木鱼",
+            "gap": 70,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 540,
+                "f1": 420,
+                "d": 0.06,
+                "w": "sine",
+                "v": 0.075
+              }
+            ],
+            "desc": "正弦短音，最不刺耳"
+          },
+          {
+            "id": "tick_metal",
+            "name": "金属短击",
+            "gap": 70,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 1180,
+                "f1": 760,
+                "d": 0.05,
+                "w": "triangle",
+                "v": 0.07
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.03,
+                "v": 0.04,
+                "lo": 6000,
+                "hi": 3000
+              }
+            ],
+            "desc": "带一点高频噪声"
+          },
+          {
+            "id": "tick_blip",
+            "name": "电子点",
+            "gap": 70,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 880,
+                "f1": 880,
+                "d": 0.035,
+                "w": "square",
+                "v": 0.06
+              }
+            ],
+            "desc": "极短纯音"
+          }
+        ]
+      },
+      "kill": {
+        "name": "击毁",
+        "selected": "kill_burst",
+        "variants": [
+          {
+            "id": "kill_burst",
+            "name": "短爆裂",
+            "gap": 45,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.24,
+                "v": 0.34,
+                "lo": 3200,
+                "hi": 260
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 330,
+                "f1": 70,
+                "d": 0.2,
+                "w": "triangle",
+                "v": 0.22
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "kill_crack",
+            "name": "脆裂",
+            "gap": 45,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.1,
+                "v": 0.28,
+                "lo": 6200,
+                "hi": 900
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 880,
+                "f1": 180,
+                "d": 0.1,
+                "w": "square",
+                "v": 0.16
+              }
+            ],
+            "desc": "高频脆响，收得快"
+          },
+          {
+            "id": "kill_thud",
+            "name": "闷爆",
+            "gap": 45,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 190,
+                "f1": 52,
+                "d": 0.24,
+                "w": "sine",
+                "v": 0.4
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.14,
+                "v": 0.22,
+                "lo": 1600,
+                "hi": 220
+              }
+            ],
+            "desc": "低频为主，偏厚"
+          },
+          {
+            "id": "kill_spark",
+            "name": "电火花",
+            "gap": 45,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.08,
+                "v": 0.22,
+                "lo": 7000,
+                "hi": 2600
+              },
+              {
+                "at": 0.03,
+                "k": "t",
+                "f0": 1320,
+                "f1": 440,
+                "d": 0.09,
+                "w": "square",
+                "v": 0.13
+              }
+            ],
+            "desc": "噼啪感"
+          }
+        ]
+      },
+      "bump": {
+        "name": "碰撞",
+        "selected": "bump_thud",
+        "variants": [
+          {
+            "id": "bump_thud",
+            "name": "低沉咚",
+            "gap": 120,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 190,
+                "f1": 48,
+                "d": 0.24,
+                "w": "sine",
+                "v": 0.55
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.16,
+                "v": 0.4,
+                "lo": 1400,
+                "hi": 200
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "bump_clang",
+            "name": "金属撞击",
+            "gap": 120,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 720,
+                "f1": 240,
+                "d": 0.26,
+                "w": "square",
+                "v": 0.24
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.12,
+                "v": 0.2,
+                "lo": 4200,
+                "hi": 600
+              }
+            ],
+            "desc": "带金属泛音"
+          },
+          {
+            "id": "bump_shield",
+            "name": "护盾嗡鸣",
+            "gap": 120,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 220,
+                "f1": 330,
+                "d": 0.3,
+                "w": "sine",
+                "v": 0.28
+              },
+              {
+                "at": 0.05,
+                "k": "t",
+                "f0": 660,
+                "f1": 990,
+                "d": 0.2,
+                "w": "triangle",
+                "v": 0.12
+              }
+            ],
+            "desc": "上扬嗡鸣，不刺耳"
+          },
+          {
+            "id": "bump_low",
+            "name": "超低频冲击",
+            "gap": 120,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 120,
+                "f1": 36,
+                "d": 0.34,
+                "w": "sine",
+                "v": 0.58
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.2,
+                "v": 0.26,
+                "lo": 900,
+                "hi": 150
+              }
+            ],
+            "desc": "最重的一记"
+          }
+        ]
+      },
+      "boom": {
+        "name": "大爆炸",
+        "selected": "boom_classic",
+        "variants": [
+          {
+            "id": "boom_classic",
+            "name": "长爆",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.8,
+                "v": 0.55,
+                "lo": 1800,
+                "hi": 120
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 140,
+                "f1": 28,
+                "d": 0.8,
+                "w": "sine",
+                "v": 0.55
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "boom_chain",
+            "name": "连锁三爆",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.3,
+                "v": 0.34,
+                "lo": 2600,
+                "hi": 200
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 160,
+                "f1": 40,
+                "d": 0.3,
+                "w": "sine",
+                "v": 0.34
+              },
+              {
+                "at": 0.14,
+                "k": "n",
+                "d": 0.3,
+                "v": 0.28,
+                "lo": 2000,
+                "hi": 180
+              },
+              {
+                "at": 0.14,
+                "k": "t",
+                "f0": 130,
+                "f1": 34,
+                "d": 0.3,
+                "w": "sine",
+                "v": 0.3
+              },
+              {
+                "at": 0.3,
+                "k": "n",
+                "d": 0.5,
+                "v": 0.36,
+                "lo": 1600,
+                "hi": 120
+              },
+              {
+                "at": 0.3,
+                "k": "t",
+                "f0": 100,
+                "f1": 26,
+                "d": 0.5,
+                "w": "sine",
+                "v": 0.42
+              }
+            ],
+            "desc": "三段递进爆裂"
+          },
+          {
+            "id": "boom_deep",
+            "name": "深沉冲击波",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 90,
+                "f1": 24,
+                "d": 1,
+                "w": "sine",
+                "v": 0.6
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.7,
+                "v": 0.4,
+                "lo": 900,
+                "hi": 100
+              }
+            ],
+            "desc": "极低频长尾"
+          },
+          {
+            "id": "boom_noise",
+            "name": "宽频白噪爆",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.65,
+                "v": 0.62,
+                "lo": 9000,
+                "hi": 300
+              },
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 180,
+                "f1": 40,
+                "d": 0.55,
+                "w": "sawtooth",
+                "v": 0.28
+              }
+            ],
+            "desc": "高频噪声为主"
+          }
+        ]
+      },
+      "down": {
+        "name": "坠毁",
+        "selected": "down_dive",
+        "variants": [
+          {
+            "id": "down_dive",
+            "name": "锯齿下坠",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 340,
+                "f1": 36,
+                "d": 0.7,
+                "w": "sawtooth",
+                "v": 0.35
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.6,
+                "v": 0.45,
+                "lo": 2400,
+                "hi": 150
+              }
+            ],
+            "desc": "F18 原款，默认款"
+          },
+          {
+            "id": "down_spiral",
+            "name": "螺旋下坠",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 620,
+                "f1": 48,
+                "d": 0.85,
+                "w": "square",
+                "v": 0.28
+              },
+              {
+                "at": 0.1,
+                "k": "t",
+                "f0": 310,
+                "f1": 30,
+                "d": 0.7,
+                "w": "sine",
+                "v": 0.3
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.55,
+                "v": 0.3,
+                "lo": 2600,
+                "hi": 160
+              }
+            ],
+            "desc": "双声部错开下坠"
+          },
+          {
+            "id": "down_power",
+            "name": "断电熄火",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 440,
+                "f1": 60,
+                "d": 0.55,
+                "w": "triangle",
+                "v": 0.3
+              },
+              {
+                "at": 0.18,
+                "k": "n",
+                "d": 0.4,
+                "v": 0.26,
+                "lo": 1400,
+                "hi": 180
+              }
+            ],
+            "desc": "先掉电后气流"
+          },
+          {
+            "id": "down_crash",
+            "name": "撞地重击",
+            "gap": 0,
+            "steps": [
+              {
+                "at": 0,
+                "k": "t",
+                "f0": 160,
+                "f1": 30,
+                "d": 0.55,
+                "w": "sine",
+                "v": 0.55
+              },
+              {
+                "at": 0,
+                "k": "n",
+                "d": 0.45,
+                "v": 0.5,
+                "lo": 3200,
+                "hi": 120
+              },
+              {
+                "at": 0.12,
+                "k": "t",
+                "f0": 90,
+                "f1": 26,
+                "d": 0.45,
+                "w": "sawtooth",
+                "v": 0.3
+              }
+            ],
+            "desc": "最重的一记"
+          }
+        ]
+      }
+    }
+  },
+  "gacha": {
+    "currency": "gem",
+    "costOne": 10,
+    "costTen": 90,
+    "freePerDay": 1,
+    "pityMax": 10,
+    "pityRarity": 5,
+    "pityNearAt": 3,
+    "up": {
+      "name": "苍穹之翼",
+      "itemId": "ur_aether_wing",
+      "hours": 48,
+      "rateMul": 2,
+      "tag": "限时 UP"
+    },
+    "tiers": [
+      {
+        "id": "r",
+        "name": "普通",
+        "rarity": 1,
+        "weight": 60,
+        "color": "#8fa3c6",
+        "reward": 20
+      },
+      {
+        "id": "sr",
+        "name": "精良",
+        "rarity": 3,
+        "weight": 28,
+        "color": "#68c6ff",
+        "reward": 60
+      },
+      {
+        "id": "ssr",
+        "name": "稀有",
+        "rarity": 5,
+        "weight": 10,
+        "color": "#ffd668",
+        "reward": 200
+      },
+      {
+        "id": "ur",
+        "name": "限定",
+        "rarity": 6,
+        "weight": 2,
+        "color": "#c48eff",
+        "reward": 600
+      }
+    ],
+    "items": [
+      {
+        "id": "r_ammo",
+        "name": "补给弹药",
+        "tier": "r",
+        "kind": "coin",
+        "desc": "常规补给，直接折成金币"
+      },
+      {
+        "id": "r_plate",
+        "name": "备用装甲板",
+        "tier": "r",
+        "kind": "coin",
+        "desc": "轻量化护板，折成金币"
+      },
+      {
+        "id": "r_fuel",
+        "name": "高能燃料",
+        "tier": "r",
+        "kind": "coin",
+        "desc": "推进剂补给，折成金币"
+      },
+      {
+        "id": "sr_scope",
+        "name": "校准瞄具",
+        "tier": "sr",
+        "kind": "coin",
+        "desc": "精良部件，折成金币"
+      },
+      {
+        "id": "sr_coil",
+        "name": "过载线圈",
+        "tier": "sr",
+        "kind": "coin",
+        "desc": "射速组件，折成金币"
+      },
+      {
+        "id": "sr_chip",
+        "name": "火控芯片",
+        "tier": "sr",
+        "kind": "coin",
+        "desc": "火控模块，折成金币"
+      },
+      {
+        "id": "ssr_neon",
+        "name": "霓虹涂装",
+        "tier": "ssr",
+        "kind": "gem",
+        "desc": "稀有外观，返还钻石"
+      },
+      {
+        "id": "ssr_core",
+        "name": "脉冲核心",
+        "tier": "ssr",
+        "kind": "gem",
+        "desc": "稀有能源，返还钻石"
+      },
+      {
+        "id": "ur_aether_wing",
+        "name": "苍穹之翼",
+        "tier": "ur",
+        "kind": "gem",
+        "desc": "本期 UP 限定，返还钻石"
+      }
+    ],
+    "reveal": {
+      "dur": 1.35,
+      "flashAt": 0.42,
+      "rays": 12,
+      "shake": 6
+    },
+    "entry": {
+      "freeText": "今日免费 {n} 抽 · {left} 后失效",
+      "pityText": "距保底还差 {n} 抽",
+      "upText": "◆ {tag} · {name}  剩余 {left}"
+    }
+  },
+  "power": {
+    "label": "战斗力",
+    "baseline": 1000,
+    "curve": 1,
+    "weightsFromData": true,
+    "weights": {
+      "offense": 0.695,
+      "survival": 0.21,
+      "mobility": 0.095
+    },
+    "ranks": [
+      {
+        "at": 1,
+        "name": "新兵",
+        "color": "#8fa3c6"
+      },
+      {
+        "at": 1.5,
+        "name": "精锐",
+        "color": "#68c6ff"
+      },
+      {
+        "at": 2.5,
+        "name": "王牌",
+        "color": "#c48eff"
+      },
+      {
+        "at": 4,
+        "name": "传奇",
+        "color": "#ffd668"
+      }
+    ]
+  },
+  "hangar3d": [
+    {
+      "id": "vector",
+      "name": "矢量战机",
+      "code": "VECTOR WIREFRAME",
+      "quality": 5,
+      "desc": "大后掠三角主翼 + 鸭翼 + 双外倾垂尾，最初那台青蓝霓虹线框原型机。",
+      "accent": "#42c4e6",
+      "nose": 1,
+      "span": 4.4,
+      "sweep": 3.22,
+      "tipChord": 0.2,
+      "thick": 0.3,
+      "fin": 2,
+      "finHeight": 1.8,
+      "engines": 2,
+      "canard": true,
+      "zigzag": false,
+      "strake": false
+    },
+    {
+      "id": "wraith",
+      "name": "幽灵飞翼",
+      "code": "WRAITH FLYING WING",
+      "quality": 6,
+      "desc": "无垂尾翼身融合飞翼，W 形锯齿后缘把雷达反射撕成碎片；背部双进气道。",
+      "accent": "#b07cff",
+      "nose": 0.55,
+      "span": 5.6,
+      "sweep": 3.7,
+      "tipChord": 1.1,
+      "thick": 0.26,
+      "fin": 0,
+      "finHeight": 0,
+      "engines": 2,
+      "canard": false,
+      "zigzag": true,
+      "strake": false
+    },
+    {
+      "id": "paladin",
+      "name": "双发重剑",
+      "code": "PALADIN TWIN ENGINE",
+      "quality": 5,
+      "desc": "宽机身双发重型截击机，梯形主翼 + 高耸双垂尾，两台引擎各带一圈喷口辉光。",
+      "accent": "#ffba60",
+      "nose": 1.06,
+      "span": 4.9,
+      "sweep": 2.65,
+      "tipChord": 0.5,
+      "thick": 0.34,
+      "fin": 2,
+      "finHeight": 2.35,
+      "engines": 2,
+      "canard": false,
+      "zigzag": false,
+      "strake": false
+    },
+    {
+      "id": "saber",
+      "name": "逆翼金雕",
+      "code": "SABER FORWARD SWEPT",
+      "quality": 6,
+      "desc": "前掠翼 + 前置鸭翼，翼尖朝机头方向刺出；近距格斗时机动最凶的一台。",
+      "accent": "#56f0be",
+      "nose": 0.96,
+      "span": 4.6,
+      "sweep": -1.45,
+      "tipChord": 2.3,
+      "thick": 0.28,
+      "fin": 2,
+      "finHeight": 1.95,
+      "engines": 2,
+      "canard": true,
+      "zigzag": false,
+      "strake": false
+    },
+    {
+      "id": "starlance",
+      "name": "星矢截击",
+      "code": "STARLANCE INTERCEPTOR",
+      "quality": 6,
+      "desc": "超长针形机头 + 大后掠小展弦菱形翼 + 机头长边条，双垂尾大角度外倾。",
+      "accent": "#ff78be",
+      "nose": 1.28,
+      "span": 3.6,
+      "sweep": 2.65,
+      "tipChord": 0.3,
+      "thick": 0.24,
+      "fin": 2,
+      "finHeight": 2.6,
+      "engines": 2,
+      "canard": false,
+      "zigzag": false,
+      "strake": true
+    },
+    {
+      "id": "prism",
+      "name": "棱镜隐锋",
+      "code": "PRISM STEALTH",
+      "quality": 6,
+      "desc": "深灰隐身涂装 + 蓝色菱形晶体翼面，V 形光刃后缘、圆形舱环、矩形能量窗与高耸双垂尾。",
+      "accent": "#3aa0ff",
+      "nose": 1.02,
+      "span": 4.8,
+      "sweep": 2.45,
+      "tipChord": 0.72,
+      "thick": 0.26,
+      "fin": 2,
+      "finHeight": 2.9,
+      "engines": 2,
+      "canard": false,
+      "zigzag": false,
+      "strake": false
+    },
+    {
+      "id": "lambda",
+      "name": "λ 灰隼",
+      "code": "LAMBDA TAILLESS",
+      "quality": 6,
+      "desc": "无垂尾 λ 形大后掠飞翼：长尖机头 + 前置座舱，后缘折线缺口，背部双扁喷口喷出余烬格栅尾焰。",
+      "accent": "#ff6a4d",
+      "nose": 1.12,
+      "span": 4.4,
+      "sweep": 4.7,
+      "tipChord": 0.6,
+      "thick": 0.22,
+      "fin": 0,
+      "finHeight": 0,
+      "engines": 2,
+      "canard": false,
+      "zigzag": false,
+      "strake": false
+    }
+  ]
+}
