@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "settings": {
     "unlockAllLevels": 1,
     "invulnTime": 1,
@@ -2632,5 +2632,154 @@
       "zigzag": false,
       "strake": false
     }
-  ]
+  ],
+  "floatText": {
+    "pool": 20,
+    "maxAlive": 14,
+    "life": {
+      "popMs": 0.12,
+      "riseMs": 0.44,
+      "fadeMs": 0.24
+    },
+    "pop": {
+      "startScale": 0.42,
+      "overshootScale": 1.25,
+      "settleScale": 1.0,
+      "overshootAt": 0.55,
+      "risePx": 4,
+      "growPower": 3,
+      "settlePower": 2
+    },
+    "rise": {
+      "distancePx": 34,
+      "easePower": 2
+    },
+    "fade": {
+      "shrinkTo": 0.72,
+      "alphaPower": 2
+    },
+    "stagger": {
+      "sideMin": 5,
+      "sideMax": 12,
+      "upMin": 8,
+      "upMax": 18,
+      "alternate": 1
+    },
+    "crit": {
+      "shakePx": 3.2,
+      "shakeHz": 17.5,
+      "shakeYRatio": 0.56,
+      "decayS": 0.36,
+      "labelSize": 10,
+      "labelAlpha": 0.85
+    },
+    "abbrev": {
+      "groupSep": ",",
+      "decimals": 1,
+      "units": [
+        {
+          "at": 100000000,
+          "div": 100000000,
+          "suffix": "亿"
+        },
+        {
+          "at": 10000,
+          "div": 10000,
+          "suffix": "万"
+        }
+      ]
+    },
+    "tip": {
+      "size": 15,
+      "dur": 0.7,
+      "critSize": 20,
+      "critDur": 0.8,
+      "drift": 18,
+      "risePx": 38,
+      "rewardSize": 13,
+      "rewardDur": 0.62,
+      "color": "#60dcf0",
+      "critColor": "#ffd668",
+      "rewardColor": "#7ee89e"
+    },
+    "tones": [
+      {
+        "id": "normal",
+        "name": "普通",
+        "size": 18,
+        "color": "#f0f8ff",
+        "prefix": "",
+        "suffix": "",
+        "text": "",
+        "label": "",
+        "shake": 0
+      },
+      {
+        "id": "crit",
+        "name": "暴击",
+        "size": 30,
+        "color": "#ff4e5c",
+        "prefix": "",
+        "suffix": "!",
+        "text": "",
+        "label": "暴击",
+        "shake": 1
+      },
+      {
+        "id": "gain",
+        "name": "奖励 / 治疗",
+        "size": 15,
+        "color": "#7ee89e",
+        "prefix": "+",
+        "suffix": "",
+        "text": "",
+        "label": "",
+        "shake": 0
+      },
+      {
+        "id": "miss",
+        "name": "未命中",
+        "size": 14,
+        "color": "#8a93a8",
+        "prefix": "",
+        "suffix": "",
+        "text": "未命中",
+        "label": "",
+        "shake": 0
+      },
+      {
+        "id": "fire",
+        "name": "火",
+        "size": 18,
+        "color": "#ff8a3c",
+        "prefix": "",
+        "suffix": "",
+        "text": "",
+        "label": "",
+        "shake": 0
+      },
+      {
+        "id": "ice",
+        "name": "冰",
+        "size": 18,
+        "color": "#68c6ff",
+        "prefix": "",
+        "suffix": "",
+        "text": "",
+        "label": "",
+        "shake": 0
+      },
+      {
+        "id": "poison",
+        "name": "毒",
+        "size": 18,
+        "color": "#c48eff",
+        "prefix": "",
+        "suffix": "",
+        "text": "",
+        "label": "",
+        "shake": 0
+      }
+    ]
+  }
 }
